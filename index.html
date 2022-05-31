@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moonbucks</title>
     <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -22,34 +23,45 @@
             </div>
 
             <ul class="navbar_menu">
-                <li class="navbar_item">
-                    <a href="#home" class="navbar_link" id="home-page">Home</a>
+                <li class="navbar_item home active">
+                    <a class="navbar_link" id="home-link">Home</a>
                 </li>
-                <li class="navbar_item">
-                    <a href="#menu" class="navbar_link" id="menu-page">Menu</a>
+                <li class="navbar_item menu">
+                    <a href="#menu" class="navbar_link" id="menu-link">Menu</a>
                 </li>
-                <li class="navbar_item">
-                    <a href="#about" class="navbar_link" id="about-page">About</a>
+                <li class="navbar_item about">
+                    <a href="#about" class="navbar_link" id="about-link">About</a>
                 </li>
-                <li class="navbar_button">
-                    <a href="#sign-up" class="button" id="sign-up-page">Sign Up</a>
+                <li class="navbar_item contact">
+                    <a href="#contact" class="navbar_link" id="contact-link">Contact</a>
+                </li>
+                <li class="navbar_button sign-up">
+                    <a href="#sign-up" class="button" id="sign-up-link">Sign Up</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="hero" id="home">
-        <div class="hero_container">
-            <div class="hero_footage_container">
-                <video autoplay muted loop id="hero-footage">
-                    <source src="./assets/videos/hero/coffee-footage.mp4" type="video/mp4">
-                </video>
+    <section id="home">
+        <div class="hero">
+            <div class="hero_container">
+                <div class="hero_footage_container">
+                    <video autoplay muted loop id="hero-footage">
+                        <source src="./assets/videos/hero/coffee-footage.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h1 class="hero_heading">Discover Your Favorites</h1>
+                <br>
+                <p class="hero_description">Authentic Signature Coffee</p>
             </div>
-            <h1 class="hero_heading">Discover Your Favorites</h1>
-            <br>
-            <p class="hero_description">Authentic Signature Coffee</p>
         </div>
-    </div>
+    </section>
+
+    <section id="menu"></section>
+    <section id="about"></section>
+    <section id="contact"></section>
+    <!-- <section id="sign-up"></section> -->
+
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script src="./app.js"></script>

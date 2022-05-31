@@ -126,8 +126,10 @@ body {
     transition: all 0.3s ease;
 }
 
-
-
+.navbar_item.active{
+    border-bottom: 5px solid rgba(255, 0, 0, 1);
+    transition: all 0.3s ease;
+}
 
 .hero_container{
     color: white;
