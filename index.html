@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="navbar_container">
-            <a href="#home" id="navbar_logo"><img src="assets/images/app_logo.png" alt="moonbucks logo"></a>
+            <a id="navbar_logo"><img src="assets/images/app_logo.png" alt="moonbucks logo"></a>
 
             <div class="navbar_toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -42,6 +43,34 @@
                     <a href="#sign-up" class="button" id="sign-up-link">Sign Up</a>
                 </li>
             </ul>
+
+            <div class="navbar_contact">
+                <div class="navbar_icon">
+                    <a href='https://instagram.com' target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: white; --darkreader-inline-fill:#e8e6e3;" data-darkreader-inline-fill=""><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg>
+                    </a>
+                </div>
+
+                <div class="navbar_icon">
+                    <a href="https://facebook.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: white; --darkreader-inline-fill:#e8e6e3;" data-darkreader-inline-fill=""><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325 1.42-3.592 3.5-3.592.699-.002 1.399.034 2.095.107v2.42h-1.435c-1.128 0-1.348.538-1.348 1.325v1.735h2.697l-.35 2.725h-2.348V21H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z"></path></svg>
+                    </a>
+                </div>
+
+                <div class="navbar_icon">
+                    <a href="https://twitter.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: white; --darkreader-inline-fill:#e8e6e3;" data-darkreader-inline-fill=""><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg>
+                    </a>
+                </div>
+
+                <div class="navbar_icon">
+                    <a href="https://youtube.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgb(255, 255, 255); --darkreader-inline-fill:#e8e6e3;" data-darkreader-inline-fill=""><path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+
         </div>
     </nav>
 
@@ -61,12 +90,264 @@
     </section>
 
     <section id="promo"></section>
-    <section id="menu"></section>
+
+    <section id="menu">
+
+        <div class="menu_navbar">
+            <h1 class="menu_header">MENU</h1>
+            <div class="menu_link active" id="coffee">
+                <p>COFFEE</p>
+                <div class="menu_active_indicator"></div>
+            </div>
+            <div class="menu_link" id="snacks">
+                <p>SNACKS</p>
+                <div class="menu_active_indicator"></div>
+            </div>
+        </div>
+
+        <div id="menu-rule">
+        </div>
+
+        <div class="menu_container">
+            <div class="menu_document" id="coffee-docs" >
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Caffè Latte</span>
+                        <span class='menu_price'>4</span>
+                    </div>
+                    <span class='menu_description'>Rich, full-bodied espresso in steamed milk, lightly topped with foam. A caffè latte is simply a shot or two of bold, tasty espresso with fresh, sweet steamed milk over it.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Cappuccino</span>
+                        <span class='menu_price'>2</span>
+                    </div>
+                    <span class='menu_description'>Espresso with steamed milk, topped with a deep layer of foam.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Caffè Mocha</span>
+                        <span class='menu_price'>2</span>
+                    </div>
+                    <span class='menu_description'>Espresso with bittersweet mocha sauce and steamed milk, topped with sweetened whipped cream.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Caramel Macchiato</span>
+                        <span class='menu_price'>8</span>
+                    </div>
+                    <span class='menu_description'>Espresso combined with vanilla-flavoured syrup, milk and caramel sauce over ice. A Starbucks classic, chilled for a classic summer’s day. To our signature espresso we add a creamy mix of vanilla syrup and cold milk poured over ice; it’s then topped with our proprietary buttery caramel sauce. Sweet! </span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Caffè Americano</span>
+                        <span class='menu_price'>8</span>
+                    </div>
+                    <span class='menu_description'>HOT: Rich, full-bodied espresso with hot water.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Espresso Con Panna</span>
+                        <span class='menu_price'>9</span>
+                    </div>
+                    <span class='menu_description'>The delicate dollop of whipped cream softens the rich and caramelly espresso flavours so exquisitely, you may choose to forego adding sugar altogether.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Espresso Macchiato</span>
+                        <span class='menu_price'>4</span>
+                    </div>
+                    <span class='menu_description'>Sometimes a touch is just enough. And so it is with the slight dab of foam we set atop our signature espresso in this classic European-style beverage.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Flat White</span>
+                        <span class='menu_price'>1</span>
+                    </div>
+                    <span class='menu_description'>Expertly steamed milk poured over a double shot of our signature espresso and finished with a thin layer of velvety microfoam.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Cocoa Cappuccino</span>
+                        <span class='menu_price'>6</span>
+                    </div>
+                    <span class='menu_description'>A cappuccino has good balance of steamed milk and espresso. Add in a little bittersweet mocha and the flavour becomes something else. Coffee always pairs well with chocolate. Another big part of the cappuccino’s charm is the dense and velvety foam. We dust some cocoa powder and lay chocolate drizzle on the thick foam and the transformation is complete</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Ristretto Bianco</span>
+                        <span class='menu_price'>9</span>
+                    </div>
+                    <span class='menu_description'>Bold espresso and pure velvet texture. A product of simplicity, crafted into artistry, our baristas know that balance is key to the perfect Ristretto Bianco.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Iced Espresso & Matcha Fusion</span>
+                        <span class='menu_price'>2</span>
+                    </div>
+                    <span class='menu_description'>We’ve combined our signature Espresso Roast with fine Matcha powder and milk to create the beautifully-layered Matcha & Espresso Fusion. Enjoy it hot and iced.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Double Shot Iced Shaken Espresso</span>
+                        <span class='menu_price'>5</span>
+                    </div>
+                    <span class='menu_description'>Two fresh shots of espresso, hand shaken with classic syrup and ice, finished with low fat milk mixed with sweetened whipped cream.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Cold Foam</span>
+                        <span class='menu_price'>2</span>
+                    </div>
+                    <span class='menu_description'>Slightly sweetened ice-cold espresso, poured through a distinct layer of surprisingly creamy, nonfat milk cold foam.</span>
+                </div>
+            </div>
+
+            <div class="menu_document closed" id="snacks-docs">
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Beef Sausage & Cheese Croissant </span>
+                        <span class='menu_price'>10</span>
+                    </div>
+                    <span class='menu_description'>This classic croissant is made with 100 percent butter to create a golden, crunchy top and soft, flaky layers inside.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Almond Croissant </span>
+                        <span class='menu_price'>3</span>
+                    </div>
+                    <span class='menu_description'>Rich, almond flan enveloped in a croissant, then topped with sliced almonds. It's the perfect combination of sweet and savory.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Chocolate Croissant </span>
+                        <span class='menu_price'>9</span>
+                    </div>
+                    <span class='menu_description'>Butter croissant dough is wrapped around two chocolate batons to create a perfect balance that will satisfy any sweet tooth.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Cheese Bagels </span>
+                        <span class='menu_price'>1</span>
+                    </div>
+                    <span class='menu_description'>A New York style bagel topped with Asiago cheese, poppy and sesame seeds, onion and garlic.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Bagel Bites </span>
+                        <span class='menu_price'>2</span>
+                    </div>
+                    <span class='menu_description'>Bagel in small bites with Cheese Melt filling.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Srikaya Swirl Danish </span>
+                        <span class='menu_price'>4</span>
+                    </div>
+                    <span class='menu_description'>A classic Danish Swirl with Srikaya filling</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Cinnamon Roll</span>
+                        <span class='menu_price'>4</span>
+                    </div>
+                    <span class='menu_description'>Sweet dough with cinnamon filling, sultanas and topped with a cream cheese style icing.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Tuna Puff </span>
+                        <span class='menu_price'>5</span>
+                    </div>
+                    <span class='menu_description'>Buttery flaky savory tuna puff pastry</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Spicy Tuna Bread </span>
+                        <span class='menu_price'>9</span>
+                    </div>
+                    <span class='menu_description'>Soft sweet dough filled with Spicy Savory Tuna</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Pillow Glazed Doughnut </span>
+                        <span class='menu_price'>5</span>
+                    </div>
+                    <span class='menu_description'>An old time doughnut topped glazed</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Nutella Bombolone </span>
+                        <span class='menu_price'>1</span>
+                    </div>
+                    <span class='menu_description'>A classic bombolone filled with Nutella filling</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Cinnamon Chocolate Marble Cake </span>
+                        <span class='menu_price'>6</span>
+                    </div>
+                    <span class='menu_description'>A quickbread marbled with cinnamon and chocolate into loaf style</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Sumatra Chocolate Éclair </span>
+                        <span class='menu_price'>5</span>
+                    </div>
+                    <span class='menu_description'>A choux pastry filled with Sumatran Chocolate filling</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Raisin Oatmeal Scones </span>
+                        <span class='menu_price'>8</span>
+                    </div>
+                    <span class='menu_description'>A classic english quickbread made from raisin and oats</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Espresso Brownie </span>
+                        <span class='menu_price'>1</span>
+                    </div>
+                    <span class='menu_description'>A rich moist, fudgy espresso brownie.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>7 Seeds Cookie</span>
+                        <span class='menu_price'>7</span>
+                    </div>
+                    <span class='menu_description'>Not your ordinary 7 Type Seeds mix in with a Peanut Butter Batter</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Peanut Butter Cornflakes Cookie </span>
+                        <span class='menu_price'>10</span>
+                    </div>
+                    <span class='menu_description'>A classic Peanut Butter cookie recipe twisted with Cornflakes</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Old Fashioned Blueberry Muffin </span>
+                        <span class='menu_price'>6</span>
+                    </div>
+                    <span class='menu_description'>A classic Starbucks muffin filled with a smooth blueberry filling.</span>
+                </div>
+                <div class='menu_item'>
+                    <div class='menu_title'>
+                        <span class='menu_name'>Triple Chocolate Muffin </span>
+                        <span class='menu_price'>2</span>
+                    </div>
+                    <span class='menu_description'>Decadently rich - the perfect choice for chocolate lovers.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="about"></section>
     <section id="contact"></section>
     <!-- <section id="sign-up"></section> -->
 
     <script src="./app.js"></script>
+
+
 </body>
 
 </html>

@@ -99,6 +99,17 @@ body {
     font-weight: 500;
 }
 
+.navbar_contact{
+    display: flex;
+}
+
+.navbar_icon{
+    display: flex;
+    align-items: center;
+    width: 40px;
+    justify-content: center;
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -160,6 +171,130 @@ section {
     height: inherit;
     object-fit:cover;
 }
+
+#menu{
+    /* border: 2px solid red; */
+    color: white;
+    display: flex;
+    padding: 5rem 0;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.menu_navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:flex-end;
+    /* border: 2px solid yellow; */
+}
+
+#menu-rule{
+    border: 2px solid rgb(65, 65, 65);
+
+}
+
+.menu_link{
+    display: flex;
+    flex-direction: row-reverse;
+    color: rgba(255, 255, 255, 0.531);
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.5rem;
+    /* border: 2px solid blue; */
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu_link.active{
+    color:white;
+}
+
+.menu_link.active .menu_active_indicator{
+    margin: 0 1rem;
+    border: 2px solid yellow;
+    flex:1;
+    height: 0;
+    transition: all 0.3s ease;
+}
+
+.menu_container{
+    width: 35%;
+    /* border: 2px solid yellow; */
+    max-height: 700px;
+    overflow-y: scroll;
+    border-radius: 25px;
+    background: #2a2c2dfc;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-left: 20px;
+}
+
+
+.menu_document{
+    /* border: 2px solid green; */
+    max-height: 95%;
+    width: 95%;
+    overflow-y: scroll;
+    padding-right: 20px;
+
+}
+
+.menu_document::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, white);
+    border-radius: 6px;
+}
+
+.menu_document.closed{
+    display: none;
+}
+
+.menu_item{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.menu_header{
+    color: #C8AF7E;
+    font-size: 4rem;
+    height: 90px;
+}
+
+.menu_title{
+    color: #C8AF7E;
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.menu_name{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.menu_price{
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.menu_price{
+    color: #C8AF7E;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.menu_price::before{
+    content:'$';
+}
+
+.menu_description{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
 
 @media screen and (max-width: 960px) {
     .navbar {
@@ -267,6 +402,10 @@ section {
         color: orange;
         font-size: 2.25rem;
         transition: all 0.3s ease;
+    }
+
+    .navbar_contact{
+        display: none;
     }
 
     .hero_container{
