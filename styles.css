@@ -131,6 +131,10 @@ body {
     transition: all 0.3s ease;
 }
 
+section {
+    min-height: 800px;
+}
+
 .hero_container{
     color: white;
     display: flex;
@@ -159,7 +163,7 @@ body {
 
 @media screen and (max-width: 960px) {
     .navbar {
-        position: unset;
+        position: sticky;
     }
 
     .navbar_container {
@@ -253,6 +257,16 @@ body {
 
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar_item.active{
+        border: none;
+    }
+
+    .navbar_item.active a{
+        color: orange;
+        font-size: 2.25rem;
+        transition: all 0.3s ease;
     }
 
     .hero_container{
