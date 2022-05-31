@@ -137,7 +137,7 @@ body {
     align-items: center;
     height: 50vh;
     /* border: 2px solid red; */
-    font-size: 2ren;
+    font-size: 2rem;
     padding: 0 20px;
     text-align: center;
 }
@@ -255,5 +255,6 @@ body {
 
     .hero_container{
         height: 35vh;
+        font-size: 1rem;
     }
 }
