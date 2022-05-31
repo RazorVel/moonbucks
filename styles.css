@@ -13,7 +13,6 @@ html {
 body {
     background-color: #181A1B;
     font-family: 'Inter', sans-serif;
-
 }
 
 ::-webkit-scrollbar {
@@ -205,10 +204,12 @@ section {
     width: 100%;
     align-items: center;
     cursor: pointer;
+    transition: all 1s ease;
 }
 
 .menu_link.active{
     color:white;
+    transition: all 1s ease;
 }
 
 .menu_link.active .menu_active_indicator{
@@ -216,7 +217,7 @@ section {
     border: 2px solid yellow;
     flex:1;
     height: 0;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 .menu_container{
@@ -239,7 +240,6 @@ section {
     width: 95%;
     overflow-y: scroll;
     padding-right: 20px;
-
 }
 
 .menu_document::-webkit-scrollbar-thumb {
