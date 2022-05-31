@@ -141,9 +141,9 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 65vh;
     /* border: 2px solid red; */
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 0 20px;
     text-align: center;
 }

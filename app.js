@@ -28,7 +28,7 @@ const navbarLinks = document.querySelectorAll('.navbar_menu li');
 window.addEventListener('scroll', (e) => {
     let current = '';
 
-    console.log('yoffset: '+pageYOffset);
+    // console.log('yoffset: '+pageYOffset);
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -38,7 +38,7 @@ window.addEventListener('scroll', (e) => {
         }
     })
 
-    console.log('current: '+current);
+    // console.log('current: '+current);
 
     navbarLinks.forEach( li => {
         li.classList.remove('active');
