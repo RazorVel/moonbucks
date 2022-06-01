@@ -513,6 +513,57 @@ body {
         font-size: 1rem;
     }
 
+    #promo{
+        padding: 2rem 25px 1.5rem 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .promo_container{
+        width: 100%;
+        flex-direction: column;
+        margin: 20px auto;
+        gap: 1rem;
+    }
+
+    #snack-container{
+        flex-direction: column;
+    }
+
+    .promo_frame{
+        margin: 0 auto;
+        height: 61%;
+        width: 100%;
+    }
+
+    .promo_textbox{
+        padding: 0;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    #coffee-textbox{
+        padding: 0;
+    }
+
+    #snacks-textbox{
+        padding: 0;
+        text-align: center;
+    }
+
+    .promo_title{
+        font-size: 1.5rem;
+        letter-spacing: 0.05rem;
+        word-spacing: 0.1rem;
+    }
+
+    .promo_description{
+        font-size: 1rem;
+        letter-spacing: 0.03rem;
+        word-spacing: 0.05rem;
+    }
+
     #menu{
         flex-direction: column;
         gap: 0;
