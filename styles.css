@@ -6,7 +6,6 @@
 }
 
 html {
-    overflow-y: scroll;
     overflow-y: overlay;
 }
 
@@ -27,8 +26,6 @@ body {
     background: linear-gradient(transparent, #ff9f05);
     border-radius: 6px;
 }
-
-
 
 #navbar_logo {
     position: relative;
@@ -180,11 +177,85 @@ body {
     object-fit:cover;
 }
 
+#promo{
+    padding: 25px 0;
+    /* border: 2px solid red; */
+}
+
+.promo_container{
+    width: 80%;
+    /* border: 2px solid orange; */
+    display: flex;
+    flex-direction: row;
+    margin: 90px auto;
+    /* align-items: center; */
+}
+
+#snack-container{
+    flex-direction: row-reverse;
+}
+
+.promo_frame{
+    /* border: 2px solid green; */
+    height: 350px;
+    width: 40%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.promo_banner{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: ease 1s;
+}
+
+.promo_banner.fadeOut{
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+.promo_textbox{
+    /* border: 2px solid blue; */
+    flex:1;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#coffee-textbox{
+    padding-right: 0;
+}
+
+#snacks-textbox{
+    padding-left: 0;
+    text-align: right;
+}
+
+.promo_title{
+    color: #C8AF7E;
+    /* border: 2px solid purple; */
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+}
+
+.promo_description{
+    color: white;
+    /* border: 2px solid purple; */
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.1rem;
+}
+
 #menu{
     /* border: 2px solid red; */
     color: white;
     display: flex;
-    padding: 5rem 0;
+    padding: 4rem 0;
     justify-content: center;
     gap: 5rem;
 }
@@ -223,6 +294,14 @@ body {
 .menu_link.active{
     color:white;
     transition: all 1s ease;
+}
+
+.menu_link p{
+    transition: all 1s ease;
+}
+
+.menu_link p:hover{
+    transform:scale(1.1);
 }
 
 .menu_link.active .menu_active_indicator{

@@ -72,3 +72,52 @@ menuNavbarLinks.forEach( menu_link => {
         activeDocs.classList.remove('closed');
     });
 })
+
+const coffeeImages = ['caffe-americano.jpg', 'caffe-latte.jpg', 'capuccino.jpg', 'caramel-macchiato.jpg', 'cocoa-cappucino.jpg', 'cold-foam.webp', 'double-shot-iced-shaken-espresso.jpg', 'espresso-con-panna.jpg', 'espresso-macchiato.gif', 'flat-white.png', 'ice-espresso-macha-fusion.jpg', 'ristretto-bianco-nedir-nasil-yapilir-icinde-ne-var-2.jpg'];
+
+const snackImages = ['7-seeds-cookie.jpg', 'almond-croissant.jpg', 'bagel-bites.jpg', 'beef-sausage-and-cheese-croisant.webp', 'cheese-bagels.jpg', 'chocolate-croissant.jpg', 'cinnamon-chocolate-marble-cake.webp', 'cinnamon-rolls.jpg', 'espresso-brownie.jpg', 'nutella-bombolone.jpg', 'old-fashioned-blueberry-muffin.jpg', 'peanut-butter-cornflakes-cookie.jpg', 'pillow-glazed-doughnut.webp', 'raisin-oatmeal-scones.jpg', 'spicy-tuna-bread.jpg', 'srikaya-swirl-danish.jpg', 'sumatra-chocolate-eclair.jpg', 'triple-chocolate-muffin.jpg', 'tuna-puff.jpg'];
+
+var coffeeIndex=0;
+var snacksIndex=0;
+
+const coffeeBanner = document.querySelector('#coffee-banner');
+const snacksBanner = document.querySelector('#snacks-banner');
+
+const rotateImages = (banner, dir, current_item) => {
+    banner.classList.add('fadeOut');
+    setTimeout(function(){
+        banner.setAttribute('src', dir+'/'+current_item);
+        banner.classList.remove('fadeOut');
+    }, 1000);
+};
+
+const rotateCoffee = () => {
+    if (coffeeIndex >= coffeeImages.length) coffeeIndex=0;
+
+    rotateImages(coffeeBanner, './assets/images/coffee/', coffeeImages[coffeeIndex++]);
+};
+
+const rotateSnacks = () => {
+    if (snacksIndex >= snackImages.length) snacksIndex=0;
+
+    rotateImages(snacksBanner, './assets/images/snacks/', snackImages[snacksIndex++]);
+};
+
+const resizeFrame = () => {
+    promoFrame.forEach(frame => {
+        let width = frame.clientWidth;
+        let height = width / 57 * 35;
+        frame.style.height=height+'px';
+    });
+}
+
+var promoFrame = document.querySelectorAll('.promo_frame');
+
+window.addEventListener('resize', resizeFrame)
+
+window.onload=function(){
+    setInterval('rotateCoffee()', 5000);
+    setInterval('rotateSnacks()', 5000);
+
+    resizeFrame();
+}
