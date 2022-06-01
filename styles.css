@@ -277,14 +277,14 @@ body {
 }
 
 .menu_title{
-    color: #C8AF7E;
+    color: #603601;
     display: flex;
     margin-bottom: 1rem;
     justify-content: space-between;
 }
 
 .menu_name{
-    font-weight: 600;
+    font-weight: 600;   
     font-size: 2.5rem;
 }
 
@@ -294,7 +294,7 @@ body {
 }
 
 .menu_price{
-    color: #C8AF7E;
+    color: #603601;
     font-weight: 900;
     font-size: 2rem;
 }
@@ -485,4 +485,72 @@ body {
         height: fit-content;
     }
 
+}
+.location_ctr{
+    background-color: black;
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.location_ctr .contact_header{
+    color: white;
+}
+.loc_hdr{
+    display: flex;
+    justify-content: space-around;
+}
+.address{
+    font-family: inter;
+    font-size: 20px;
+    color: white;
+}
+.location_ctr .open_time{
+    font-family: inter;
+    font-size: 20px;
+    color: white;
+}
+.num{
+    font-family: inter;
+    font-size: 20px;
+    color: white;
+}
+.feedback_ctr input{
+    background-color: black;
+    border: none;
+    color: white;
+    border-bottom: 1px solid grey;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.feedback_ctr input::placeholder{
+    color: #A64B2A;
+}
+.feedback_ctr input:focus::placeholder{
+    color: #733C3C;
+}
+.feedback_ctr input:focus{
+    border: none;
+    outline: none;
+    color: white;
+    border-bottom: 1px solid #A64B2A;
+}
+.feedback_ctr p{
+    color: #A64B2A;
+    bottom: 50px;
+    font-size: 30px;
+    position: relative;
+}
+.feedback_ctr button{
+    background-color: black;
+    color: #b56401;
+    border: 1px solid #b56401;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.feedback_ctr button:hover{
+    cursor: pointer;
+    background-color: #b56401;
+    color: black;
+    border: 1px solid ;
 }
