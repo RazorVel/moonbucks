@@ -421,6 +421,11 @@ body {
         justify-content: flex-start;
     }
 
+    .menu_header{
+        width: 100%;
+        text-align: center;
+    }
+
     .menu_navbar{
         align-items: flex-start;
         padding: 0 10px;
