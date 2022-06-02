@@ -548,6 +548,19 @@ section{
     transition: all 0.3s ease;
 }
 
+footer{
+    width: 100%;
+    background: #C8AF7E;
+    padding: 0.5rem 0;
+    color: black;
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    text-align: center;
+}
 
 @media screen and (max-width: 960px) {
     .navbar {
@@ -857,6 +870,12 @@ section{
     .sign-up-form .form-submit{
         width: 60%;
         font-size: 1rem;
+    }
+
+    footer{
+        padding-left:25px;
+        padding-right:25px;
+        font-size: 0.7rem;
     }
 
 }
