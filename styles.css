@@ -72,6 +72,12 @@ body {
 
 .navbar_item {
     height: 80px;
+    transition: all 0.3s ease;
+}
+
+.navbar_item.active{
+    border-bottom: 5px solid rgba(255, 0, 0, 1);
+    transition: all 0.3s ease;
 }
 
 .navbar_link {
@@ -93,6 +99,13 @@ body {
     width: 100%;
     padding: 0 1rem;
     font-weight: 500;
+    transition: all 1s ease;
+}
+
+.navbar_button.active{
+    filter: brightness(1.2);
+    transform: scale(1.1);
+    transition: all 1s ease;
 }
 
 .navbar_contact{
@@ -135,9 +148,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.button:hover {
+.navbar_button .button:hover {
     filter: brightness(1.2);
     transform: scale(1.1);
+}
+
+.navbar_button.active .button:hover{
+    filter: none;
+    transform: none;
 }
 
 .navbar_link:hover {
@@ -146,9 +164,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.navbar_item.active{
-    border-bottom: 5px solid rgba(255, 0, 0, 1);
-    transition: all 0.3s ease;
+section{
+    scroll-margin-top: 0px;
+    /* border: 2px solid red; */
+    padding: 3rem 0;
+}
+
+#home{
+    padding: 0;
 }
 
 .hero_container{
@@ -178,8 +201,11 @@ body {
 }
 
 #promo{
-    padding: 25px 0;
+    /* padding: 25px 0; */
     /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
 }
 
 .promo_container{
@@ -187,7 +213,7 @@ body {
     /* border: 2px solid orange; */
     display: flex;
     flex-direction: row;
-    margin: 90px auto;
+    margin: 0 auto;
     /* align-items: center; */
 }
 
@@ -255,7 +281,7 @@ body {
     /* border: 2px solid red; */
     color: white;
     display: flex;
-    padding: 4rem 0;
+    /* padding: 4rem 0; */
     justify-content: center;
     gap: 5rem;
 }
@@ -387,6 +413,104 @@ body {
     font-size: 1.5rem;
 }
 
+#sign-up{
+    /* border: 2px solid red; */
+    display: flex;
+    background-color: #110C09;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.sign-up-headline{
+    /* border: 2px solid orange; */
+    width: 60%;
+    display:flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sign-up-header{
+    font-weight: 800;
+    font-size: 3rem;
+    color: #C8AF7E;
+    width: 100%;
+}
+
+.sign-up-description{
+    font-weight: 500;
+    font-size: 1.5rem;
+    color:white;
+    width: 100%;
+}
+
+.sign-up-description + .sign-up-form{
+    margin: 2rem 0;
+}
+
+.sign-up-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* border: 2px solid yellow; */
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up-form .form-input{
+    height: 4rem;
+    color: white;
+    background-color: #181A1B;
+    border: none;
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease;
+    cursor: text;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    width: 100%;
+}
+
+.sign-up-form .form-input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 4px solid #fcb045c4;
+    transition: all 0.3s ease;
+}
+
+.sign-up-form .form-input::placeholder{
+    color: rgb(164, 164, 164);
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sign-up-form .form-input:focus::placeholder{
+    color: grey;
+    transition: all 0.3s ease;
+}
+
+
+.sign-up-form .form-submit{
+    cursor: pointer;
+    width: 60%;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: #fcb045;
+    border: 1px solid #fcb045;
+    color: #110C09;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+.sign-up-form .form-submit:hover{
+    background-color: #110C09;
+    color: #fcb045;
+    transition: all 0.3s ease;
+}
+
 
 @media screen and (max-width: 960px) {
     .navbar {
@@ -455,6 +579,13 @@ body {
     .navbar_button {
         padding-top: 1rem;
         padding-bottom: 2rem;
+        transition: all 1s ease;
+    }
+
+    .navbar_button.active .button:hover{
+        filter: brightness(1.2);
+        transform: none;
+        transition: all 1s ease;
     }
 
     .button {
@@ -508,22 +639,27 @@ body {
         display: none;
     }
 
+    section{
+        padding: 2rem 0;
+    }
+
     .hero_container{
         height: 35vh;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     #promo{
-        padding: 2rem 25px 1.5rem 25px;
+        padding-left: 25px;
+        padding-right: 25px;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 2rem;
     }
 
     .promo_container{
         width: 100%;
         flex-direction: column;
-        margin: 20px auto;
+        margin: 0 auto;
         gap: 1rem;
     }
 
@@ -567,7 +703,7 @@ body {
     #menu{
         flex-direction: column;
         gap: 0;
-        padding: 10px;
+        padding: 0 10px;
         height:80vh;
         justify-content: flex-start;
     }
@@ -613,6 +749,53 @@ body {
         width: 100%;
         padding-right: 15px;
         height: fit-content;
+    }
+
+    #sign-up{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        gap: 1.5rem;
+    }
+
+    .sign-up-headline{
+        width: 100%;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .sign-up-header{
+        font-size: 1.5rem;
+        letter-spacing: 0.05rem;
+        word-spacing: 0.1rem;
+    }
+
+    .sign-up-description{
+        font-size: 1rem;
+        letter-spacing: 0.03rem;
+        word-spacing: 0.05rem;
+    }
+
+    .sign-up-form{
+        width: 100%;
+    }
+
+    .sign-up-form .form-input{
+        height: 3rem;
+        border-bottom: none;
+        width: 90%;
+        border-radius: 0.5rem;
+    }
+
+    .sign-up-form .form-input:focus{
+        border-bottom: none;
+    }
+
+
+    .sign-up-form .form-submit{
+        width: 60%;
+        font-size: 1rem;
     }
 
 }

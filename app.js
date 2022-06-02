@@ -14,18 +14,17 @@ menuLinks.addEventListener('click', (e) => {
     menuLinks.classList.remove('active');
 });
 
-const homeButton = document.querySelector('#home-link');
-const logoButton = document.querySelector('#navbar_logo');
+const sections = document.querySelectorAll('section');
+const navbar = document.querySelector('.navbar');
 
-const scrollToTop = () => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+const adjustScrollMarginTop = () => {
+    sections.forEach(section => {
+        section.style.scrollMarginTop = navbar.clientHeight + 'px';
+    });
 };
 
-homeButton.addEventListener('click', scrollToTop);
-logoButton.addEventListener('click', scrollToTop);
+window.addEventListener('resize', adjustScrollMarginTop);
 
-
-const sections = document.querySelectorAll('section');
 const navbarLinks = document.querySelectorAll('.navbar_menu li');
 
 window.addEventListener('scroll', (e) => {
@@ -120,4 +119,6 @@ window.onload=function(){
     setInterval('rotateSnacks()', 5000);
 
     resizeFrame();
+
+    adjustScrollMarginTop();
 }

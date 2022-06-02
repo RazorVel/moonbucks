@@ -9,7 +9,7 @@
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
     <title>Moonbucks</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css?v=0.8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar_container">
-            <a id="navbar_logo"><img src="assets/images/app_logo.png" alt="moonbucks logo"></a>
+            <a href="#home" id="navbar_logo"><img src="assets/images/app_logo.png" alt="moonbucks logo"></a>
 
             <div class="navbar_toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -29,7 +29,7 @@
 
             <ul class="navbar_menu">
                 <li class="navbar_item home active">
-                    <a class="navbar_link" id="home-link">Home</a>
+                    <a href="#home" class="navbar_link" id="home-link">Home</a>
                 </li>
                 <li class="navbar_item promo">
                     <a href="#promo" class="navbar_link" id="promo_link">Promo</a>
@@ -371,9 +371,18 @@
 
     <section id="about"></section>
     <section id="contact"></section>
-    <!-- <section id="sign-up"></section> -->
+    <section id="sign-up">
+        <div class="sign-up-headline">
+            <h1 class="sign-up-header">JOIN OUR MAILING LIST</h1>
+            <p class="sign-up-description">Sign up for our newsletter and learn about special events and promotions before we announce them anywhere else!</p>
+        </div>
+        <form class="sign-up-form">
+            <input class="form-input" type="email" placeholder="Email Address" required>
+            <input class="form-submit" type="submit" value="SIGN UP">
+        </form>
+    </section>
 
-    <script src="./app.js"></script>
+    <script src="./app.js?v=0.8"></script>
 
 
 </body>
