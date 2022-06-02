@@ -413,6 +413,43 @@ section{
     font-size: 1.5rem;
 }
 
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    gap: 1rem;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.about_header{
+    font-weight: 800;
+    font-size: 3rem;
+    color: #C8AF7E;
+    /* border: 2px solid orange; */
+}
+
+.about_header + .about_quote{
+    margin: 1rem 0;
+}
+
+.about_quote{
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    /* border: 2px solid orange; */
+}
+
+.about_description{
+    font-weight: 500;
+    color: white;
+    font-size: 1.5rem;
+    /* border: 2px solid orange; */
+}
+
 #sign-up{
     /* border: 2px solid red; */
     display: flex;
@@ -701,9 +738,11 @@ section{
     }
 
     #menu{
+        /* border: 2px solid red; */
         flex-direction: column;
         gap: 0;
-        padding: 0 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         height:80vh;
         justify-content: flex-start;
     }
@@ -749,6 +788,28 @@ section{
         width: 100%;
         padding-right: 15px;
         height: fit-content;
+    }
+
+    #about{
+        padding-left: 25px;
+        padding-right: 25px;
+        gap: 0.7rem;
+    }
+
+    .about_header{
+        font-size: 2.5rem;
+    }
+
+    .about_header + .about_quote{
+        margin: 0.8rem 0;
+    }
+
+    .about_quote{
+        font-size: 1.5rem;
+    }
+
+    .about_description{
+        font-size: 1rem;
     }
 
     #sign-up{
