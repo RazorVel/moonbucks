@@ -1,124 +1,126 @@
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.navbar_menu');
-const navLogo = document.querySelector('#navbar_logo');
+(() => {
+    'use strict';
 
-const mobileMenu = () => {
-    menu.classList.toggle('is-active');
-    menuLinks.classList.toggle('active');
-};
+    const ROTATION_INTERVAL = 5000;
+    const FADE_DURATION = 1000;
 
-menu.addEventListener('click', mobileMenu);
+    const coffeeImages = [
+        'caffe-americano.jpg',
+        'caffe-latte.jpg',
+        'capuccino.jpg',
+        'caramel-macchiato.jpg',
+        'cocoa-cappucino.jpg',
+        'cold-foam.webp',
+        'double-shot-iced-shaken-espresso.jpg',
+        'espresso-con-panna.jpg',
+        'espresso-macchiato.gif',
+        'flat-white.png',
+        'ice-espresso-macha-fusion.jpg',
+        'ristretto-bianco-nedir-nasil-yapilir-icinde-ne-var-2.jpg',
+    ];
 
-menuLinks.addEventListener('click', (e) => {
-    menu.classList.remove('is-active');
-    menuLinks.classList.remove('active');
-});
+    const snackImages = [
+        '7-seeds-cookie.jpg',
+        'almond-croissant.jpg',
+        'bagel-bites.jpg',
+        'beef-sausage-and-cheese-croisant.webp',
+        'cheese-bagels.jpg',
+        'chocolate-croissant.jpg',
+        'cinnamon-chocolate-marble-cake.webp',
+        'cinnamon-rolls.jpg',
+        'espresso-brownie.jpg',
+        'nutella-bombolone.jpg',
+        'old-fashioned-blueberry-muffin.jpg',
+        'peanut-butter-cornflakes-cookie.jpg',
+        'pillow-glazed-doughnut.webp',
+        'raisin-oatmeal-scones.jpg',
+        'spicy-tuna-bread.jpg',
+        'srikaya-swirl-danish.jpg',
+        'sumatra-chocolate-eclair.jpg',
+        'triple-chocolate-muffin.jpg',
+        'tuna-puff.jpg',
+    ];
 
-const sections = document.querySelectorAll('section');
-const navbar = document.querySelector('.navbar');
+    const initializeNavigation = () => {
+        const toggle = document.querySelector('#mobile-menu');
+        const links = document.querySelector('.navbar_menu');
+        const sections = document.querySelectorAll('section');
+        const navbarLinks = document.querySelectorAll('.navbar_menu li');
 
-const adjustScrollMarginTop = () => {
-    sections.forEach(section => {
-        section.style.scrollMarginTop = navbar.clientHeight + 'px';
-    });
-};
+        const setMenuOpen = (isOpen) => {
+            toggle.classList.toggle('is-active', isOpen);
+            links.classList.toggle('active', isOpen);
+            toggle.setAttribute('aria-expanded', String(isOpen));
+        };
 
-window.addEventListener('resize', adjustScrollMarginTop);
-
-const navbarLinks = document.querySelectorAll('.navbar_menu li');
-
-window.addEventListener('scroll', (e) => {
-    let current = '';
-
-    // console.log('yoffset: '+pageYOffset);
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - sectionHeight / 3)){
-            current = section.getAttribute('id');
-        }
-    });
-
-    // console.log('current: '+current);
-
-    navbarLinks.forEach( li => {
-        li.classList.remove('active');
-        if (li.classList.contains(current)){
-            li.classList.add('active');
-        }
-    });
-
-});
-
-const menuNavbarLinks = document.querySelectorAll('.menu_link');
-const documentDivs = document.querySelectorAll('.menu_document');
-
-menuNavbarLinks.forEach( menu_link => {
-    menu_link.addEventListener('click', (e) => {
-        const current = menu_link.getAttribute('id');
-        const documentId = current + '-' +'docs'
-        menuNavbarLinks.forEach(link => {
-            link.classList.remove('active');
+        toggle.addEventListener('click', () => {
+            setMenuOpen(!links.classList.contains('active'));
         });
-        menu_link.classList.add('active');
-
-        documentDivs.forEach(div => {
-            div.classList.add('closed');
+        links.addEventListener('click', (event) => {
+            if (event.target.closest('a')) setMenuOpen(false);
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && links.classList.contains('active')) {
+                setMenuOpen(false);
+                toggle.focus();
+            }
         });
 
-        const activeDocs = document.querySelector('#'+documentId);
-        activeDocs.classList.remove('closed');
-    });
-})
+        const updateActiveSection = () => {
+            let currentSection = '';
 
-const coffeeImages = ['caffe-americano.jpg', 'caffe-latte.jpg', 'capuccino.jpg', 'caramel-macchiato.jpg', 'cocoa-cappucino.jpg', 'cold-foam.webp', 'double-shot-iced-shaken-espresso.jpg', 'espresso-con-panna.jpg', 'espresso-macchiato.gif', 'flat-white.png', 'ice-espresso-macha-fusion.jpg', 'ristretto-bianco-nedir-nasil-yapilir-icinde-ne-var-2.jpg'];
+            sections.forEach((section) => {
+                const threshold = section.offsetTop - section.clientHeight / 3;
+                if (window.scrollY >= threshold) currentSection = section.id;
+            });
 
-const snackImages = ['7-seeds-cookie.jpg', 'almond-croissant.jpg', 'bagel-bites.jpg', 'beef-sausage-and-cheese-croisant.webp', 'cheese-bagels.jpg', 'chocolate-croissant.jpg', 'cinnamon-chocolate-marble-cake.webp', 'cinnamon-rolls.jpg', 'espresso-brownie.jpg', 'nutella-bombolone.jpg', 'old-fashioned-blueberry-muffin.jpg', 'peanut-butter-cornflakes-cookie.jpg', 'pillow-glazed-doughnut.webp', 'raisin-oatmeal-scones.jpg', 'spicy-tuna-bread.jpg', 'srikaya-swirl-danish.jpg', 'sumatra-chocolate-eclair.jpg', 'triple-chocolate-muffin.jpg', 'tuna-puff.jpg'];
+            navbarLinks.forEach((link) => {
+                link.classList.toggle('active', link.classList.contains(currentSection));
+            });
+        };
 
-var coffeeIndex=0;
-var snacksIndex=0;
+        window.addEventListener('scroll', updateActiveSection, { passive: true });
+        window.addEventListener('resize', updateActiveSection);
+        window.addEventListener('load', updateActiveSection);
+        updateActiveSection();
+    };
 
-const coffeeBanner = document.querySelector('#coffee-banner');
-const snacksBanner = document.querySelector('#snacks-banner');
+    const initializeMenu = () => {
+        const links = document.querySelectorAll('.menu_link');
+        const documents = document.querySelectorAll('.menu_document');
 
-const rotateImages = (banner, dir, current_item) => {
-    banner.classList.add('fadeOut');
-    setTimeout(function(){
-        banner.setAttribute('src', dir+'/'+current_item);
-        banner.classList.remove('fadeOut');
-    }, 1000);
-};
+        links.forEach((link) => {
+            link.addEventListener('click', () => {
+                links.forEach((item) => {
+                    const isActive = item === link;
+                    item.classList.toggle('active', isActive);
+                    item.setAttribute('aria-pressed', String(isActive));
+                });
 
-const rotateCoffee = () => {
-    if (coffeeIndex >= coffeeImages.length) coffeeIndex=0;
+                documents.forEach((panel) => {
+                    panel.classList.toggle('closed', panel.id !== `${link.id}-docs`);
+                });
+            });
+        });
+    };
 
-    rotateImages(coffeeBanner, './assets/images/coffee/', coffeeImages[coffeeIndex++]);
-};
+    const startSlideshow = (selector, directory, images) => {
+        const banner = document.querySelector(selector);
+        let index = 0;
 
-const rotateSnacks = () => {
-    if (snacksIndex >= snackImages.length) snacksIndex=0;
+        window.setInterval(() => {
+            banner.classList.add('fadeOut');
 
-    rotateImages(snacksBanner, './assets/images/snacks/', snackImages[snacksIndex++]);
-};
+            window.setTimeout(() => {
+                banner.setAttribute('src', `${directory}/${images[index]}`);
+                banner.classList.remove('fadeOut');
+                index = (index + 1) % images.length;
+            }, FADE_DURATION);
+        }, ROTATION_INTERVAL);
+    };
 
-const resizeFrame = () => {
-    promoFrame.forEach(frame => {
-        let width = frame.clientWidth;
-        let height = width / 57 * 35;
-        frame.style.height=height+'px';
-    });
-}
-
-var promoFrame = document.querySelectorAll('.promo_frame');
-
-window.addEventListener('resize', resizeFrame)
-
-window.onload=function(){
-    setInterval('rotateCoffee()', 5000);
-    setInterval('rotateSnacks()', 5000);
-
-    resizeFrame();
-
-    adjustScrollMarginTop();
-}
+    initializeNavigation();
+    initializeMenu();
+    startSlideshow('#coffee-banner', './assets/images/coffee', coffeeImages);
+    startSlideshow('#snacks-banner', './assets/images/snacks', snackImages);
+})();

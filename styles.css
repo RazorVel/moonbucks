@@ -34,7 +34,6 @@ body {
     cursor: pointer;
 }
 
-
 #navbar_logo img {
     height: 80%;
     filter: invert(1);
@@ -64,6 +63,13 @@ body {
     padding: 0 50px;
 }
 
+.navbar_toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
 .navbar_menu {
     display: flex;
     align-items: center;
@@ -75,7 +81,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.navbar_item.active{
+.navbar_item.active {
     border-bottom: 5px solid rgba(255, 0, 0, 1);
     transition: all 0.3s ease;
 }
@@ -102,29 +108,29 @@ body {
     transition: all 1s ease;
 }
 
-.navbar_button.active{
+.navbar_button.active {
     filter: brightness(1.2);
     transform: scale(1.1);
     transition: all 1s ease;
 }
 
-.navbar_contact{
+.navbar_contact {
     display: flex;
 }
 
-.navbar_icon{
+.navbar_icon {
     display: flex;
     align-items: center;
     width: 40px;
     justify-content: center;
 }
 
-.navbar_icon a svg{
-    fill:white;
+.navbar_icon a svg {
+    fill: white;
     transition: all 0.3s ease;
 }
 
-.navbar_icon:hover a svg{
+.navbar_icon:hover a svg {
     fill: #C8AF7E;
     transform: scale(1.3);
     transition: all 0.3s ease;
@@ -153,7 +159,7 @@ body {
     transform: scale(1.1);
 }
 
-.navbar_button.active .button:hover{
+.navbar_button.active .button:hover {
     filter: none;
     transform: none;
 }
@@ -164,24 +170,22 @@ body {
     transition: all 0.3s ease;
 }
 
-section{
-    scroll-margin-top: 0px;
-    /* border: 2px solid red; */
+section {
+    scroll-margin-top: 80px;
     padding: 3rem 0;
 }
 
-#home{
+#home {
     padding: 0;
 }
 
-.hero_container{
+.hero_container {
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 65vh;
-    /* border: 2px solid red; */
     font-size: 3rem;
     padding: 0 20px;
     text-align: center;
@@ -197,150 +201,141 @@ section{
 #hero-footage {
     width: 100vw;
     height: inherit;
-    object-fit:cover;
+    object-fit: cover;
 }
 
-#promo{
-    /* padding: 25px 0; */
-    /* border: 2px solid red; */
+#promo {
     display: flex;
     flex-direction: column;
     gap: 90px;
 }
 
-.promo_container{
+.promo_container {
     width: 80%;
-    /* border: 2px solid orange; */
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    /* align-items: center; */
 }
 
-#snack-container{
+#snack-container {
     flex-direction: row-reverse;
 }
 
-.promo_frame{
-    /* border: 2px solid green; */
-    height: 350px;
+.promo_frame {
+    aspect-ratio: 57 / 35;
+    align-self: flex-start;
     width: 40%;
     border-radius: 25px;
     overflow: hidden;
 }
 
-.promo_banner{
+.promo_banner {
     width: 100%;
     height: 100%;
     opacity: 1;
     transition: ease 1s;
 }
 
-.promo_banner.fadeOut{
+.promo_banner.fadeOut {
     opacity: 0;
     transform: scale(1.2);
 }
 
-.promo_textbox{
-    /* border: 2px solid blue; */
-    flex:1;
+.promo_textbox {
+    flex: 1;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-#coffee-textbox{
+#coffee-textbox {
     padding-right: 0;
 }
 
-#snacks-textbox{
+#snacks-textbox {
     padding-left: 0;
     text-align: right;
 }
 
-.promo_title{
+.promo_title {
     color: #C8AF7E;
-    /* border: 2px solid purple; */
     font-weight: 700;
     font-size: 2.5rem;
     letter-spacing: 0.1rem;
     word-spacing: 0.2rem;
 }
 
-.promo_description{
+.promo_description {
     color: white;
-    /* border: 2px solid purple; */
     font-weight: 500;
     font-size: 2rem;
     letter-spacing: 0.05rem;
     word-spacing: 0.1rem;
 }
 
-#menu{
-    /* border: 2px solid red; */
+#menu {
     color: white;
     display: flex;
-    /* padding: 4rem 0; */
     justify-content: center;
     gap: 5rem;
 }
 
-.menu_navbar{
+.menu_navbar {
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    align-items:flex-end;
-    /* border: 2px solid yellow; */
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
-.menu_navbar_container{
+.menu_navbar_container {
     width: 100%;
 }
 
-#menu-rule{
+#menu-rule {
     border: 2px solid rgb(65, 65, 65);
 
 }
 
-.menu_link{
+.menu_link {
+    border: 0;
+    background: transparent;
+    font-family: inherit;
     display: flex;
     flex-direction: row-reverse;
     color: rgba(255, 255, 255, 0.531);
     text-align: right;
     font-weight: 600;
     font-size: 1.5rem;
-    /* border: 2px solid blue; */
     width: 100%;
     align-items: center;
     cursor: pointer;
     transition: all 1s ease;
 }
 
-.menu_link.active{
-    color:white;
+.menu_link.active {
+    color: white;
     transition: all 1s ease;
 }
 
-.menu_link p{
+.menu_link > span:first-child {
     transition: all 1s ease;
 }
 
-.menu_link p:hover{
-    transform:scale(1.1);
+.menu_link > span:first-child:hover {
+    transform: scale(1.1);
 }
 
-.menu_link.active .menu_active_indicator{
+.menu_link.active .menu_active_indicator {
     margin: 0 1rem;
     border: 2px solid yellow;
-    flex:1;
+    flex: 1;
     height: 0;
     transition: all 1s ease;
 }
 
-.menu_container{
+.menu_container {
     width: 35%;
-    /* border: 2px solid yellow; */
     max-height: 700px;
     overflow-y: hidden;
     border-radius: 25px;
@@ -352,8 +347,7 @@ section{
     padding-right: 10px;
 }
 
-.menu_document{
-    /* border: 2px solid green; */
+.menu_document {
     max-height: 95%;
     width: 95%;
     overflow-y: scroll;
@@ -365,136 +359,124 @@ section{
     border-radius: 6px;
 }
 
-.menu_document.closed{
+.menu_document.closed {
     display: none;
 }
 
-.menu_item{
+.menu_item {
     display: flex;
     flex-direction: column;
     margin: 2rem 0;
 }
 
-.menu_header{
+.menu_header {
     color: #C8AF7E;
     font-size: 4rem;
     height: 90px;
 }
 
-.menu_title{
+.menu_title {
     color: #C8AF7E;
     display: flex;
     margin-bottom: 1rem;
     justify-content: space-between;
 }
 
-.menu_name{
+.menu_name {
     font-weight: 600;
     font-size: 2.5rem;
 }
 
-.menu_price{
-    font-weight: 900;
-    font-size: 2rem;
-}
-
-.menu_price{
+.menu_price {
     color: #C8AF7E;
     font-weight: 900;
     font-size: 2rem;
 }
 
-.menu_price::before{
-    content:'$';
+.menu_price::before {
+    content: '$';
 }
 
-.menu_description{
+.menu_description {
     font-weight: 500;
     font-size: 1.5rem;
 }
 
-#about{
+#about {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     text-align: center;
     justify-content: center;
-    /* border: 2px solid red; */
     gap: 1rem;
     padding-left: 15%;
     padding-right: 15%;
 }
 
-.about_header{
+.about_header {
     font-weight: 800;
     font-size: 3rem;
     color: #C8AF7E;
-    /* border: 2px solid orange; */
 }
 
-.about_header + .about_quote{
+.about_header + .about_quote {
     margin: 1rem 0;
 }
 
-.about_quote{
+.about_quote {
     color: white;
     font-weight: 700;
     font-size: 2rem;
-    /* border: 2px solid orange; */
 }
 
-.about_description{
+.about_description {
     font-weight: 500;
     color: white;
     font-size: 1.5rem;
-    /* border: 2px solid orange; */
 }
 
-#sign-up{
-    /* border: 2px solid red; */
+#sign-up {
     display: flex;
     background-color: #110C09;
     justify-content: center;
     gap: 3rem;
 }
 
-.sign-up-headline{
-    /* border: 2px solid orange; */
+.sign-up-headline {
     width: 60%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.sign-up-header{
+.sign-up-header {
     font-weight: 800;
     font-size: 3rem;
     color: #C8AF7E;
     width: 100%;
 }
 
-.sign-up-description{
+.sign-up-description {
     font-weight: 500;
     font-size: 1.5rem;
-    color:white;
+    color: white;
     width: 100%;
 }
 
-.sign-up-description + .sign-up-form{
+.sign-up-description + .sign-up-form {
     margin: 2rem 0;
 }
 
-.sign-up-form{
+.sign-up-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    /* border: 2px solid yellow; */
     width: 25%;
     align-items: center;
     justify-content: center;
 }
 
-.sign-up-form .form-input{
+.sign-up-form .form-input {
     height: 4rem;
     color: white;
     background-color: #181A1B;
@@ -508,27 +490,26 @@ section{
     width: 100%;
 }
 
-.sign-up-form .form-input:focus{
+.sign-up-form .form-input:focus {
     border: none;
     outline: none;
     border-bottom: 4px solid #fcb045c4;
     transition: all 0.3s ease;
 }
 
-.sign-up-form .form-input::placeholder{
+.sign-up-form .form-input::placeholder {
     color: rgb(164, 164, 164);
     transition: all 0.3s ease;
     font-size: 1.5rem;
     text-align: center;
 }
 
-.sign-up-form .form-input:focus::placeholder{
+.sign-up-form .form-input:focus::placeholder {
     color: grey;
     transition: all 0.3s ease;
 }
 
-
-.sign-up-form .form-submit{
+.sign-up-form .form-submit {
     cursor: pointer;
     width: 60%;
     height: 3rem;
@@ -542,13 +523,13 @@ section{
     transition: all 0.3s ease;
 }
 
-.sign-up-form .form-submit:hover{
+.sign-up-form .form-submit:hover {
     background-color: #110C09;
     color: #fcb045;
     transition: all 0.3s ease;
 }
 
-footer{
+footer {
     width: 100%;
     background: #C8AF7E;
     padding: 0.5rem 0;
@@ -558,7 +539,6 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid red; */
     text-align: center;
 }
 
@@ -632,7 +612,7 @@ footer{
         transition: all 1s ease;
     }
 
-    .navbar_button.active .button:hover{
+    .navbar_button.active .button:hover {
         filter: brightness(1.2);
         transform: none;
         transition: all 1s ease;
@@ -652,6 +632,7 @@ footer{
     }
 
     #mobile-menu {
+        display: block;
         position: absolute;
         top: 20%;
         right: 5%;
@@ -675,30 +656,30 @@ footer{
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .navbar_item.active{
+    .navbar_item.active {
         border: none;
     }
 
-    .navbar_item.active a{
+    .navbar_item.active a {
         color: orange;
         font-size: 2.25rem;
         transition: all 0.3s ease;
     }
 
-    .navbar_contact{
+    .navbar_contact {
         display: none;
     }
 
-    section{
+    section {
         padding: 2rem 0;
     }
 
-    .hero_container{
+    .hero_container {
         height: 35vh;
         font-size: 1.5rem;
     }
 
-    #promo{
+    #promo {
         padding-left: 25px;
         padding-right: 25px;
         display: flex;
@@ -706,126 +687,123 @@ footer{
         gap: 2rem;
     }
 
-    .promo_container{
+    .promo_container {
         width: 100%;
         flex-direction: column;
         margin: 0 auto;
         gap: 1rem;
     }
 
-    #snack-container{
+    #snack-container {
         flex-direction: column;
     }
 
-    .promo_frame{
+    .promo_frame {
         margin: 0 auto;
-        height: 61%;
         width: 100%;
     }
 
-    .promo_textbox{
+    .promo_textbox {
         padding: 0;
         text-align: center;
         gap: 0.5rem;
     }
 
-    #coffee-textbox{
+    #coffee-textbox {
         padding: 0;
     }
 
-    #snacks-textbox{
+    #snacks-textbox {
         padding: 0;
         text-align: center;
     }
 
-    .promo_title{
+    .promo_title {
         font-size: 1.5rem;
         letter-spacing: 0.05rem;
         word-spacing: 0.1rem;
     }
 
-    .promo_description{
+    .promo_description {
         font-size: 1rem;
         letter-spacing: 0.03rem;
         word-spacing: 0.05rem;
     }
 
-    #menu{
-        /* border: 2px solid red; */
-        flex-direction: column;
+    #menu {
+            flex-direction: column;
         gap: 0;
         padding-left: 10px;
         padding-right: 10px;
-        height:80vh;
+        height: 80vh;
         justify-content: flex-start;
     }
 
-    .menu_header{
+    .menu_header {
         width: 100%;
         text-align: center;
     }
 
-    .menu_navbar{
+    .menu_navbar {
         align-items: flex-start;
         padding: 0 10px;
     }
 
-    .menu_navbar_container{
+    .menu_navbar_container {
         display: flex;
         flex-direction: row;
         overflow-x: scroll;
     }
 
-    #menu-rule{
+    #menu-rule {
         display: none;
     }
 
-    .menu_link{
+    .menu_link {
         flex-direction: column;
     }
 
-    .menu_link.active .menu_active_indicator{
+    .menu_link.active .menu_active_indicator {
         width: 80%;
     }
 
-    .menu_container{
+    .menu_container {
         width: 95%;
         margin: 0 auto;
-        padding: 10 10px;
+        padding: 10px;
         overflow-y: hidden;
         height: fit-content;
     }
 
-
-    .menu_document{
+    .menu_document {
         width: 100%;
         padding-right: 15px;
         height: fit-content;
     }
 
-    #about{
+    #about {
         padding-left: 25px;
         padding-right: 25px;
         gap: 0.7rem;
     }
 
-    .about_header{
+    .about_header {
         font-size: 2.5rem;
     }
 
-    .about_header + .about_quote{
+    .about_header + .about_quote {
         margin: 0.8rem 0;
     }
 
-    .about_quote{
+    .about_quote {
         font-size: 1.5rem;
     }
 
-    .about_description{
+    .about_description {
         font-size: 1rem;
     }
 
-    #sign-up{
+    #sign-up {
         flex-direction: column;
         align-items: center;
         padding-left: 25px;
@@ -833,48 +811,47 @@ footer{
         gap: 1.5rem;
     }
 
-    .sign-up-headline{
+    .sign-up-headline {
         width: 100%;
         gap: 1rem;
         text-align: center;
     }
 
-    .sign-up-header{
+    .sign-up-header {
         font-size: 1.5rem;
         letter-spacing: 0.05rem;
         word-spacing: 0.1rem;
     }
 
-    .sign-up-description{
+    .sign-up-description {
         font-size: 1rem;
         letter-spacing: 0.03rem;
         word-spacing: 0.05rem;
     }
 
-    .sign-up-form{
+    .sign-up-form {
         width: 100%;
     }
 
-    .sign-up-form .form-input{
+    .sign-up-form .form-input {
         height: 3rem;
         border-bottom: none;
         width: 90%;
         border-radius: 0.5rem;
     }
 
-    .sign-up-form .form-input:focus{
+    .sign-up-form .form-input:focus {
         border-bottom: none;
     }
 
-
-    .sign-up-form .form-submit{
+    .sign-up-form .form-submit {
         width: 60%;
         font-size: 1rem;
     }
 
-    footer{
-        padding-left:25px;
-        padding-right:25px;
+    footer {
+        padding-left: 25px;
+        padding-right: 25px;
         font-size: 0.7rem;
     }
 
